@@ -1,6 +1,8 @@
 import unittest
 import random
-from algorithms.sort import bubble_sort
+from algorithms.sort import (
+    bubble_sort,
+    selection_sort )
 
 
 def generate_random_array(cnt):
@@ -22,4 +24,9 @@ class TestSuite(unittest.TestCase):
     def test_bubble_sort(self):
         for test_input in self.testinput_array:
             bubble_sort.sort(test_input)
+            self.assertEqual(sorted(test_input), test_input)
+
+    def test_selection_sort(self):
+        for test_input in self.testinput_array:
+            selection_sort.sort(test_input)
             self.assertEqual(sorted(test_input), test_input)
