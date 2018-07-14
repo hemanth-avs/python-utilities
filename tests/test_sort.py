@@ -23,7 +23,3 @@ class TestSuite(unittest.TestCase):
         for test_input in self.testinput_array:
             bubble_sort.sort(test_input)
             self.assertEqual(sorted(test_input), test_input)
-
-
-if __name__ == "__main__":
-    unittest.main()
