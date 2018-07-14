@@ -2,7 +2,8 @@ import unittest
 import random
 from algorithms.sort import (
     bubble_sort,
-    selection_sort)
+    selection_sort,
+    insertion_sort)
 
 
 def generate_random_array(cnt):
@@ -29,4 +30,9 @@ class TestSuite(unittest.TestCase):
     def test_selection_sort(self):
         for test_input in self.testinput_array:
             selection_sort.sort(test_input)
+            self.assertEqual(sorted(test_input), test_input)
+
+    def test_insertion_sort(self):
+        for test_input in self.testinput_array:
+            insertion_sort.sort(test_input)
             self.assertEqual(sorted(test_input), test_input)
