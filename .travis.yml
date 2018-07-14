@@ -1,0 +1,14 @@
+language: python
+cache: pip
+python:
+    - 2.7
+    - 3.6
+
+install:
+    - pip3 install -r requirements.txt
+
+before_script:
+    - flake8 . --max-line-length=127 --show-source --statistics
+
+script:
+    - tox
