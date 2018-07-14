@@ -2,7 +2,7 @@ import unittest
 import random
 from algorithms.sort import (
     bubble_sort,
-    selection_sort )
+    selection_sort)
 
 
 def generate_random_array(cnt):
