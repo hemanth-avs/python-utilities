@@ -1,8 +1,12 @@
 language: python
 cache: pip
-python:
-    - 2.7
-    - 3.6
+
+matrix:
+    include:
+        - python: 2.7
+          env: TOX_ENV=py34
+        - python: 3.6
+          env: TOX_ENV=py36
 
 install:
     - pip install -r requirements.txt
@@ -11,4 +15,4 @@ before_script:
     - flake8 . --max-line-length=127 --show-source --statistics
 
 script:
-    - tox
+    - tox -e $TOX_ENV
