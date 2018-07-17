@@ -22,9 +22,6 @@ class SinglyLinkedList:
         self.head = None
         self._size = 0
 
-    def get_size(self):
-        return self._size
-
     def __len__(self):
         return self._size
 

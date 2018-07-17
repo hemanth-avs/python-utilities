@@ -7,6 +7,8 @@ class TestSuite(unittest.TestCase):
     def test_singly_linked_list(self):
 
         sl_list = linkedlist.SinglyLinkedList()
+        self.assertEqual(0, len(sl_list))
+
         sl_list.append(100)
         sl_list.append(200)
         sl_list.append(300)
