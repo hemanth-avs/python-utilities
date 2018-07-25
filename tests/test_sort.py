@@ -3,7 +3,8 @@ import random
 from algorithms.sort import (
     bubble_sort,
     selection_sort,
-    insertion_sort)
+    insertion_sort,
+    merge_sort)
 
 
 def generate_random_array(cnt):
@@ -36,3 +37,8 @@ class TestSuite(unittest.TestCase):
         for test_input in self.testinput_array:
             insertion_sort.sort(test_input)
             self.assertEqual(sorted(test_input), test_input)
+
+    def test_merge_sort(self):
+        for test_input in self.testinput_array:
+            sorted_output = merge_sort.sort(test_input)
+            self.assertEqual(sorted(test_input), sorted_output)
