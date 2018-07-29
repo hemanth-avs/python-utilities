@@ -4,7 +4,12 @@
 
 
 def sort(collection):
+    """
+    Selection Sort
 
+    :param collection: Input Array
+    :return: None
+    """
     input_len = len(collection)
 
     for outer_idx in range(input_len):
@@ -15,4 +20,5 @@ def sort(collection):
             if collection[lowest_value_index] > collection[inner_idx]:
                 lowest_value_index = inner_idx
 
-        collection[lowest_value_index], collection[outer_idx] = collection[outer_idx], collection[lowest_value_index]
+        collection[lowest_value_index], collection[outer_idx] = collection[outer_idx], \
+                                                                collection[lowest_value_index]

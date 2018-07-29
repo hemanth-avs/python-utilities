@@ -4,7 +4,11 @@
 
 
 def sort(collection):
-
+    """
+    Sort function implemented using Merge Sort Algorithm
+    :param collection: Input array
+    :return: Sorted Array
+    """
     collection_length = len(collection)
 
     if collection_length < 2:
@@ -19,7 +23,12 @@ def sort(collection):
 
 
 def merge(left, right):
-
+    """
+    Helper which merges two ordered arrays to a sorted array
+    :param left: Sorted Input Array
+    :param right: Sorted Input Array
+    :return: Sorted Array
+    """
     sorted_array = []
 
     left_index = 0

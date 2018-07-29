@@ -1,3 +1,7 @@
+"""
+    Sorting Test Class
+"""
+
 import unittest
 import random
 from algorithms.sort import (
@@ -8,14 +12,18 @@ from algorithms.sort import (
 
 
 def generate_random_array(cnt):
+    """
+    Generates Array of Random Numbers
+    :param cnt: Number of Random Number to be generated
+    :return:
+    """
     random_list = []
-    for index in range(cnt):
+    for _ in range(cnt):
         random_list.append(random.randint(-1000, 1000))
     return random_list
 
 
 class TestSuite(unittest.TestCase):
-
     def setUp(self):
         self.testinput_array = [generate_random_array(1000),
                                 generate_random_array(2000),
