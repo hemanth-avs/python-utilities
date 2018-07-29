@@ -25,6 +25,18 @@ class SinglyLinkedList:
     def __len__(self):
         return self._size
 
+    def __repr__(self):
+        """
+        String Representation of Linked List
+        :return: String
+        """
+        node = self.head
+        return_str = ""
+        while node:
+            return_str = return_str + str(node) + " -> "
+            node = node.next
+        return return_str[:-4]
+
     def append(self, data):
         """
         Element will be append to tail of the LinkedList
@@ -69,14 +81,22 @@ class SinglyLinkedList:
         self._size = self._size + 1
         return new_node
 
-    def __repr__(self):
+    def pop(self):
         """
-        String Representation of Linked List
-        :return: String
+        Removes and returns the Last Element
+        :return: Element
         """
+
+        previous_node = self.head
         node = self.head
-        return_str = ""
-        while node:
-            return_str = return_str + str(node) + " -> "
-            node = node.next
-        return return_str[:-4]
+
+        if not previous_node:
+            raise ValueError("No More elements to Pop")
+
+        while previous_node.next:
+            node = previous_node
+            previous_node = previous_node.next
+
+        node.next = None
+        self._size = self._size - 1
+        return previous_node

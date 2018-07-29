@@ -20,5 +20,5 @@ def sort(collection):
             if collection[lowest_value_index] > collection[inner_idx]:
                 lowest_value_index = inner_idx
 
-        collection[lowest_value_index], collection[outer_idx] = collection[outer_idx], \
-                                                                collection[lowest_value_index]
+        collection[lowest_value_index], collection[outer_idx] = collection[outer_idx], collection[
+            lowest_value_index]
