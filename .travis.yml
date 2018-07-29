@@ -13,7 +13,7 @@ install:
 
 before_script:
     - flake8 . --max-line-length=127 --show-source --statistics
-    - pylint --rcfile=.pylintrc  algorithms ds tests
+    - pylint --rcfile=.pylintrc  algorithms
 
 script:
     - tox -e $TOX_ENV
