@@ -3,12 +3,17 @@
 """
 
 
-def sort(collection, start, end):
+def sort(collection, start=0, end=None):
     """
     Quick Sort
-    :param collection: Input Array
-    :return: Sorted Array
+    :param collection: Input array
+    :param start: Start Index
+    :param end: End Index
+    :return: Returned Array with Elements sorted from Start Index to End Index
     """
+    if end is None:
+        end = len(collection)
+
     if start >= end:
         return
 

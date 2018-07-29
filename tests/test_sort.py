@@ -54,5 +54,5 @@ class TestSuite(unittest.TestCase):
 
     def test_quick_sort(self):
         for test_input in self.testinput_array:
-            quick_sort.sort(test_input, 0, len(test_input))
+            quick_sort.sort(test_input)
             self.assertEqual(sorted(test_input), test_input)
